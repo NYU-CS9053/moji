@@ -34,19 +34,22 @@ enum Language {
 }
 
 public class QuickStart {
-	private final static Language LANGUAGE = Language.PYTHON;
+	//all you need to do is change these constant
+	private final static Language LANGUAGE = Language.CSHARP;
+	private final static String SOLUTION_DIRECTORY = "/Users/pyq/Documents/Fall-2014/Assignment_week1";
+	private final static String BASE_DIRECTORY = "/Users/pyq/Documents/sh/moss-base-dir/week1";
 
 	public static void main(String[] args) throws Exception {
 		// a list of students' source code files located in the prepared
 		// directory.
 
 		Collection<File> files = FileUtils.listFiles(new File(
-				"/Users/pyq/Documents/Fall-2014/Assignment_week1"), LANGUAGE.getExtention(), true);
+				SOLUTION_DIRECTORY), LANGUAGE.getExtention(), true);
 
 		// a list of base files that was given to the students for this
 		// assignment.
 		Collection<File> baseFiles = FileUtils.listFiles(new File(
-				"/Users/pyq/Documents/sh/moss-base-dir/week1"), LANGUAGE.getExtention(), true);
+				BASE_DIRECTORY), LANGUAGE.getExtention(), true);
 
 		System.out.println("solution file is "+files.size());
 		System.out.println("base file is "+baseFiles.size());
