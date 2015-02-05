@@ -35,9 +35,11 @@ enum Language {
 
 public class QuickStart {
 	//all you need to do is change these constant
-	private final static Language LANGUAGE = Language.CSHARP;
+	private final static Language LANGUAGE = Language.CPP;
 	private final static String SOLUTION_DIRECTORY = "/Users/pyq/Documents/Fall-2014/Assignment_week1";
 	private final static String BASE_DIRECTORY = "/Users/pyq/Documents/sh/moss-base-dir/week1";
+
+	//argument is the moss user ID
 
 	public static void main(String[] args) throws Exception {
 		// a list of students' source code files located in the prepared
@@ -59,7 +61,7 @@ public class QuickStart {
 		SocketClient socketClient = new SocketClient();
 
 		// set your MOSS user ID
-		socketClient.setUserID("508444713");
+		socketClient.setUserID(args[0]);
 		// socketClient.setOpt...
 
 		// set the programming language of all student source codes
